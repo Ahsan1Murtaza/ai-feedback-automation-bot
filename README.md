@@ -1,49 +1,32 @@
-# 📌 AI Feedback Automation Bot
+# 📌 AI-Powered Multi-Year Feedback & Archival System
 
-## 📖 Description  
-This project is an automated feedback collection and reporting system designed for educational environments. It allows students to submit complaints or feedback about teachers through a Google Form, and automatically generates weekly summarized reports for each teacher.
+## 📖 Description
+An enterprise-grade automation framework designed to manage, summarize, and archive student feedback across multiple academic years (First Year through Final Year). The system orchestrates data from various Google Form entry points, generates AI summaries for faculty, and consolidates all historical data into a single "Mega Archive" database.
 
-The system is designed to be dynamic and scalable — new teachers can be added without modifying the core automation logic.
+The architecture follows a **Meta-Registry Pattern**, allowing for horizontal scaling (adding new years or departments) without modifying the core UiPath workflow.
 
----
+## 🚀 Advanced Features
+- **Multi-Year Orchestration:** Dynamically processes different academic years via a central Meta-Registry.
+- **Mega Archive Consolidation:** Automatically moves processed feedback from year-specific tabs into a unified master database.
+- **AI-Driven Faculty Reporting:** Generates intelligent summaries of student sentiment per teacher.
+- **Non-Destructive Reset:** Clears response sheets while maintaining Google Form row integrity.
+- **Scalable Teacher Onboarding:** Teacher-to-email mapping is handled at the sheet level—zero code changes required for staff updates.
 
-## 🚀 Features  
-- 📋 Google Form for student feedback submission  
-- 📅 Automated weekly form open/close using Google Apps Script  
-- 📊 Centralized data storage in Google Sheets  
-- 🤖 AI-generated summaries of complaints per teacher  
-- 📧 Automated email delivery of weekly reports to each teacher  
-- ➕ Easy teacher onboarding via registry sheet (no code changes required)  
+## 🏗️ System Architecture
+1. **Registry Scan:** Bot reads the `Meta_Registry` to identify `Active` years and their Spreadsheet IDs.
+2. **Data Extraction:** Fetches new responses and teacher registries for each active year.
+3. **Transformation:** - Maps diverse sheet columns to a unified Archive Schema.
+    - Injects metadata (Academic Year, Archive Date).
+4. **AI Processing:** Aggregates complaints per teacher and generates a weekly summary.
+5. **Load & Purge:** - Appends normalized data to the `Mega_Archive_Database`.
 
----
+## ⚙️ Tech Stack
+- **UiPath (C# Modern Profile):** Core automation logic.
+- **Google Workspace API:** Forms, Sheets, and Apps Script.
+- **Generative AI:** For complaint summarization.
+- **C# LINQ:** For high-speed data filtering and table manipulation.
 
-## 🏗️ System Workflow  
-1. Students fill out a Google Form and select a teacher  
-2. Responses are stored in a Google Sheet  
-3. A teacher registry sheet maps teachers to their emails  
-4. At the end of the week:
-   - Form is closed for the week
-   - UiPath automation is triggered  
-   - Feedback is filtered teacher-wise  
-   - AI generates summaries  
-   - Emails are sent to respective teachers
-   - Form is open for the new week   
-
----
-
-## ⚙️ Tech Stack  
-- UiPath (Automation)  
-- Google Forms  
-- Google Sheets  
-- Google Apps Script  
-- Generative Content (for summarization)  
-
----
-
-## 📂 System Design Principle  
-The system is built with **flexibility and maintainability** in mind:
-- No hardcoded teachers  
-- Dynamic data handling  
-- Easy scaling by updating the registry sheet only  
-
----
+## 📂 Design Principles
+- **Zero-Hardcoding:** All paths, sheet names, and teacher lists are externalized.
+- **Idempotency:** The bot can be re-run safely; it only processes and clears what is currently present.
+- **Data Integrity:** Protects spreadsheet headers and Form metadata through range-specific cleansing.
