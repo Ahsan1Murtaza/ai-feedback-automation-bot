@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable3" xmlns:sd1="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable2" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugsm="clr-namespace:UiPath.GSuite.Sheets.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C65D3E089E5_v2_sub_generateChatCompletion_Create.Bundle;assembly=C65D3E089E5_v2_sub_g.k9jg62PYhuR1hDwWS3f9Grs1" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable4" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugase="clr-namespace:UiPath.GSuite.Activities.Sheets.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugse="clr-namespace:UiPath.GSuite.Sheets.Enums;assembly=UiPath.GSuite" xmlns:ugsm="clr-namespace:UiPath.GSuite.Sheets.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C65D3E089E5_v2_sub_generateChatCompletion_Create.Bundle;assembly=C65D3E089E5_v2_sub_g.k9jg62PYhuR1hDwWS3f9Grs1" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -73,6 +73,8 @@
       <x:String>UiPath.Forms.Activities</x:String>
       <x:String>UiPath.Forms.Activities.Base</x:String>
       <x:String>UiPath.IntegrationService.Activities.SWEntities.C65D3E089E5_v2_sub_generateChatCompletion_Create.Bundle</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.GSuite.Sheets.Contracts</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -152,16 +154,19 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>UiPath.Forms.Activities</AssemblyReference>
       <AssemblyReference>C65D3E089E5_v2_sub_g.k9jg62PYhuR1hDwWS3f9Grs1</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable4</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="848.6666666666666,3276" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="578.6666666666666,6844" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
+      <Variable x:TypeArguments="sd1:DataTable" Name="dt_meta" />
       <Variable x:TypeArguments="x:String" Name="jsonRegistry" />
       <Variable x:TypeArguments="x:String" Name="prompt" />
       <Variable x:TypeArguments="x:String" Name="aiResponse" />
       <Variable x:TypeArguments="x:String" Name="jsonText" />
-      <Variable x:TypeArguments="sd2:DataTable" Name="data" />
-      <Variable x:TypeArguments="sd2:DataTable" Name="teacherRegistryData" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="data" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="teacherRegistryData" />
       <Variable x:TypeArguments="njl:JObject" Name="jsonOutput" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -169,7 +174,16 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uga:ReadRangeConnections x:TypeArguments="sd:DataTable3" ColumnNames="{x:Array Type=x:String}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="AI-Intelligent Feedback System (Responses)" BrowserItemId="https://docs.google.com/spreadsheets/d/1Un1Wiw86OAUpFD68d2NB2PbjO54Nqu8T7dsrbM4Vumo/edit?usp=drivesdk" ConnectionId="626205cb-1c77-49b7-becd-07e92052d7ea" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,292" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_7" ItemSelectionMode="Browse" Range="'Teacher Registry'" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="560,124" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="Reading Meta Registry" />
+    <uga:ReadRangeConnections x:TypeArguments="sd:DataTable4" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="AFAB_MANAGEMENT_HUB_2026" BrowserItemId="https://docs.google.com/spreadsheets/d/1AUL0BZwfagRjCr3Ok4nAjFU1IUNVqNRqrZOWcq8GRcU/edit?usp=drivesdk" ConnectionId="626205cb-1c77-49b7-becd-07e92052d7ea" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="560,292" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_8" ItemSelectionMode="Browse" Range="'Meta_Registry'" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+      <uga:ReadRangeConnections.ColumnNames>
+        <x:Array Type="x:String">
+          <x:String>Year_Level</x:String>
+          <x:String>Response_Sheet</x:String>
+          <x:String>Registry_Sheet</x:String>
+          <x:String>Active_Status</x:String>
+        </x:Array>
+      </uga:ReadRangeConnections.ColumnNames>
       <uga:ReadRangeConnections.FileIdBackup>
         <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
           <usau:BackupSlot.BackupValues>
@@ -178,7 +192,7 @@
         </usau:BackupSlot>
       </uga:ReadRangeConnections.FileIdBackup>
       <uga:ReadRangeConnections.Item>
-        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID0}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/1Un1Wiw86OAUpFD68d2NB2PbjO54Nqu8T7dsrbM4Vumo/edit?usp=drivesdk" ConnectionKey="fb4441cc-9d17-46cb-b9de-aaf3b9b04298" FriendlyName="AI-Intelligent Feedback System (Responses)" FullPathHint="My Drive/AI-Intelligent Feedback System (Responses)" InputMode="Browse">
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID0}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/1AUL0BZwfagRjCr3Ok4nAjFU1IUNVqNRqrZOWcq8GRcU/edit?usp=drivesdk" ConnectionKey="626205cb-1c77-49b7-becd-07e92052d7ea" FriendlyName="AFAB_MANAGEMENT_HUB_2026" FullPathHint="My Drive/AFAB_MANAGEMENT_HUB_2026" InputMode="Browse">
           <ugam:DriveItemArgument.DriveId>
             <InArgument x:TypeArguments="x:String" />
           </ugam:DriveItemArgument.DriveId>
@@ -193,66 +207,330 @@
         <ugsm:RangeMetadataSlim ColumnStart="1" RangeType="Range" />
       </uga:ReadRangeConnections.RangeMetadata>
       <uga:ReadRangeConnections.Result>
-        <OutArgument x:TypeArguments="sd:DataTable3">
-          <CSharpReference x:TypeArguments="sd:DataTable3" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">teacherRegistryData</CSharpReference>
-        </OutArgument>
-      </uga:ReadRangeConnections.Result>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:String x:Key="bbbffa17-1024-47ac-a79a-41b860f664d0">Share</x:String>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </uga:ReadRangeConnections>
-    <uga:ReadRangeConnections x:TypeArguments="sd1:DataTable2" ColumnNames="{x:Array Type=x:String}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="AI-Intelligent Feedback System (Responses)" BrowserItemId="https://docs.google.com/spreadsheets/d/1Un1Wiw86OAUpFD68d2NB2PbjO54Nqu8T7dsrbM4Vumo/edit?usp=drivesdk" ConnectionId="626205cb-1c77-49b7-becd-07e92052d7ea" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,292" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_4" ItemSelectionMode="Browse" Range="'Form responses 1'" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
-      <uga:ReadRangeConnections.FileIdBackup>
-        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
-          <usau:BackupSlot.BackupValues>
-            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
-          </usau:BackupSlot.BackupValues>
-        </usau:BackupSlot>
-      </uga:ReadRangeConnections.FileIdBackup>
-      <uga:ReadRangeConnections.Item>
-        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID1}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/1Un1Wiw86OAUpFD68d2NB2PbjO54Nqu8T7dsrbM4Vumo/edit?usp=drivesdk" ConnectionKey="fb4441cc-9d17-46cb-b9de-aaf3b9b04298" FriendlyName="AI-Intelligent Feedback System (Responses)" FullPathHint="My Drive/AI-Intelligent Feedback System (Responses)" InputMode="Browse">
-          <ugam:DriveItemArgument.DriveId>
-            <InArgument x:TypeArguments="x:String" />
-          </ugam:DriveItemArgument.DriveId>
-          <ugam:DriveItemArgument.ParentIdFullPathHint>
-            <InArgument x:TypeArguments="x:String">
-              <Literal x:TypeArguments="x:String" Value="" />
-            </InArgument>
-          </ugam:DriveItemArgument.ParentIdFullPathHint>
-        </ugam:DriveItemArgument>
-      </uga:ReadRangeConnections.Item>
-      <uga:ReadRangeConnections.RangeMetadata>
-        <ugsm:RangeMetadataSlim ColumnStart="1" RangeType="Range" />
-      </uga:ReadRangeConnections.RangeMetadata>
-      <uga:ReadRangeConnections.Result>
-        <OutArgument x:TypeArguments="sd1:DataTable2">
-          <CSharpReference x:TypeArguments="sd1:DataTable2" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">data</CSharpReference>
+        <OutArgument x:TypeArguments="sd:DataTable4">
+          <CSharpReference x:TypeArguments="sd:DataTable4" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">dt_meta</CSharpReference>
         </OutArgument>
       </uga:ReadRangeConnections.Result>
     </uga:ReadRangeConnections>
-    <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">jsonText</CSharpReference>
-        </OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">Newtonsoft.Json.JsonConvert.SerializeObject(data)</CSharpValue>
-        </InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">prompt</CSharpReference>
-        </OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16" xml:space="preserve">@"You are an AI system that analyzes student complaints for teachers.
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,6405.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd1:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,6230.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="current_year" />
+              <Variable x:TypeArguments="x:String" Name="active_status" />
+              <Variable x:TypeArguments="x:String" Name="current_response_sheet_name" />
+              <Variable x:TypeArguments="x:String" Name="current_registry_sheet_name" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">current_year</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">CurrentRow["Year_Level"].ToString()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_12">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">active_status</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">CurrentRow["Active_Status"].ToString()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <If sap:VirtualizedContainerService.HintSize="524,5817.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">!active_status.Equals("true", StringComparison.OrdinalIgnoreCase)</CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,232" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="488,124" sap2010:WorkflowViewState.IdRef="WriteLine_14">
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79" xml:space="preserve">"Automaton skipped for  " + current_year</CSharpValue>
+                    </InArgument>
+                  </WriteLine>
+                  <ui:Continue sap:VirtualizedContainerService.HintSize="488,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,5454.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd1:DataTable" Name="dt_current_registry_sheet" />
+                    <Variable x:TypeArguments="sd1:DataTable" Name="dt_current_response_sheet" />
+                    <Variable x:TypeArguments="sd1:DataTable" Name="dt_archive_batch" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="488,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Academic_Year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Original_Timestamp&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Archive_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Teacher_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Complaint_Text&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Summary_Sent&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
+                    <ui:BuildDataTable.DataTable>
+                      <OutArgument x:TypeArguments="sd1:DataTable">
+                        <CSharpReference x:TypeArguments="sd1:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">dt_archive_batch</CSharpReference>
+                      </OutArgument>
+                    </ui:BuildDataTable.DataTable>
+                  </ui:BuildDataTable>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="488,124" sap2010:WorkflowViewState.IdRef="WriteLine_15">
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80" xml:space="preserve">"Automaton running for  " + current_year</CSharpValue>
+                    </InArgument>
+                  </WriteLine>
+                  <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">current_response_sheet_name</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">CurrentRow["Response_Sheet"].ToString()</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">current_registry_sheet_name</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">CurrentRow["Registry_Sheet"].ToString()</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="488,124" sap2010:WorkflowViewState.IdRef="WriteLine_18">
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">"Reading " + current_registry_sheet_name.ToString()</CSharpValue>
+                    </InArgument>
+                  </WriteLine>
+                  <uga:ReadRangeConnections x:TypeArguments="sd1:DataTable" ColumnNames="{x:Array Type=x:String}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="AFAB_MANAGEMENT_HUB_2026" BrowserItemId="https://docs.google.com/spreadsheets/d/1AUL0BZwfagRjCr3Ok4nAjFU1IUNVqNRqrZOWcq8GRcU/edit?usp=drivesdk" ConnectionId="626205cb-1c77-49b7-becd-07e92052d7ea" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,292" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_9" ItemSelectionMode="Browse" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+                    <uga:ReadRangeConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:ReadRangeConnections.FileIdBackup>
+                    <uga:ReadRangeConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID1}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/1AUL0BZwfagRjCr3Ok4nAjFU1IUNVqNRqrZOWcq8GRcU/edit?usp=drivesdk" FriendlyName="AFAB_MANAGEMENT_HUB_2026" FullPathHint="My Drive/AFAB_MANAGEMENT_HUB_2026" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:ReadRangeConnections.Item>
+                    <uga:ReadRangeConnections.Range>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">current_registry_sheet_name</CSharpValue>
+                      </InArgument>
+                    </uga:ReadRangeConnections.Range>
+                    <uga:ReadRangeConnections.ReadAs>
+                      <InArgument x:TypeArguments="ugse:ValuesType">
+                        <CSharpValue x:TypeArguments="ugse:ValuesType" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">UiPath.GSuite.Sheets.Enums.ValuesType.Values</CSharpValue>
+                      </InArgument>
+                    </uga:ReadRangeConnections.ReadAs>
+                    <uga:ReadRangeConnections.Result>
+                      <OutArgument x:TypeArguments="sd1:DataTable">
+                        <CSharpReference x:TypeArguments="sd1:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">dt_current_registry_sheet</CSharpReference>
+                      </OutArgument>
+                    </uga:ReadRangeConnections.Result>
+                  </uga:ReadRangeConnections>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="488,124" sap2010:WorkflowViewState.IdRef="WriteLine_19">
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">"Reading " + current_response_sheet_name</CSharpValue>
+                    </InArgument>
+                  </WriteLine>
+                  <uga:ReadRangeConnections x:TypeArguments="sd1:DataTable" ColumnNames="{x:Array Type=x:String}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="AFAB_MANAGEMENT_HUB_2026" BrowserItemId="https://docs.google.com/spreadsheets/d/1AUL0BZwfagRjCr3Ok4nAjFU1IUNVqNRqrZOWcq8GRcU/edit?usp=drivesdk" ConnectionId="626205cb-1c77-49b7-becd-07e92052d7ea" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,292" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_10" ItemSelectionMode="Browse" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+                    <uga:ReadRangeConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:ReadRangeConnections.FileIdBackup>
+                    <uga:ReadRangeConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID2}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/1AUL0BZwfagRjCr3Ok4nAjFU1IUNVqNRqrZOWcq8GRcU/edit?usp=drivesdk" FriendlyName="AFAB_MANAGEMENT_HUB_2026" FullPathHint="My Drive/AFAB_MANAGEMENT_HUB_2026" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:ReadRangeConnections.Item>
+                    <uga:ReadRangeConnections.Range>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">current_response_sheet_name</CSharpValue>
+                      </InArgument>
+                    </uga:ReadRangeConnections.Range>
+                    <uga:ReadRangeConnections.Result>
+                      <OutArgument x:TypeArguments="sd1:DataTable">
+                        <CSharpReference x:TypeArguments="sd1:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">dt_current_response_sheet</CSharpReference>
+                      </OutArgument>
+                    </uga:ReadRangeConnections.Result>
+                  </uga:ReadRangeConnections>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,458" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd1:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,274" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:AddDataRow DataRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,214" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
+                            <ui:AddDataRow.ArrayRow>
+                              <InArgument x:TypeArguments="s:Object[]">
+                                <CSharpValue x:TypeArguments="s:Object[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">new object[] { current_year, CurrentRow["Timestamp"].ToString(), DateTime.Now.ToString("dd/MM/yyyy"), CurrentRow["Select Teacher"].ToString(), CurrentRow["Describe your complaint"].ToString(), "TRUE" }</CSharpValue>
+                              </InArgument>
+                            </ui:AddDataRow.ArrayRow>
+                            <ui:AddDataRow.DataTable>
+                              <InOutArgument x:TypeArguments="sd1:DataTable">
+                                <CSharpReference x:TypeArguments="sd1:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">dt_archive_batch</CSharpReference>
+                              </InOutArgument>
+                            </ui:AddDataRow.DataTable>
+                          </ui:AddDataRow>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                    <ui:ForEachRow.DataTable>
+                      <InArgument x:TypeArguments="sd1:DataTable">
+                        <CSharpValue x:TypeArguments="sd1:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">dt_current_response_sheet</CSharpValue>
+                      </InArgument>
+                    </ui:ForEachRow.DataTable>
+                  </ui:ForEachRow>
+                  <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RowPosition="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="AFAB_MASTER_ARCHIVE_DATABASE" BrowserItemId="https://docs.google.com/spreadsheets/d/13w50Ez6dOkjesYIAYc2apY-IuazOE1TPrclMIlgheKk/edit?usp=drivesdk" ConnectionId="626205cb-1c77-49b7-becd-07e92052d7ea" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="488,397.3333333333333" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_1" IncludeHeaders="True" ItemSelectionMode="Browse" Range="'All_Responses_Histroy'" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+                    <uga:WriteRangeConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID3" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:WriteRangeConnections.FileIdBackup>
+                    <uga:WriteRangeConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID3}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/13w50Ez6dOkjesYIAYc2apY-IuazOE1TPrclMIlgheKk/edit?usp=drivesdk" ConnectionKey="626205cb-1c77-49b7-becd-07e92052d7ea" FriendlyName="AFAB_MASTER_ARCHIVE_DATABASE" FullPathHint="My Drive/AFAB_MASTER_ARCHIVE_DATABASE" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:WriteRangeConnections.Item>
+                    <uga:WriteRangeConnections.RangeWriteModeBackup>
+                      <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                            <x:String></x:String>
+                          </scg:List>
+                          <scg:List x:TypeArguments="x:Object" x:Key="Append" Capacity="1">
+                            <x:String></x:String>
+                          </scg:List>
+                          <scg:List x:TypeArguments="x:Object" x:Key="Insert" Capacity="1">
+                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                          </scg:List>
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:WriteRangeConnections.RangeWriteModeBackup>
+                    <uga:WriteRangeConnections.Source>
+                      <InArgument x:TypeArguments="sd1:DataTable">
+                        <CSharpValue x:TypeArguments="sd1:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">dt_archive_batch</CSharpValue>
+                      </InArgument>
+                    </uga:WriteRangeConnections.Source>
+                  </uga:WriteRangeConnections>
+                  <uga:DeleteRowsConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="AFAB_MANAGEMENT_HUB_2026" BrowserItemId="https://docs.google.com/spreadsheets/d/1AUL0BZwfagRjCr3Ok4nAjFU1IUNVqNRqrZOWcq8GRcU/edit?usp=drivesdk" ConnectionId="626205cb-1c77-49b7-becd-07e92052d7ea" DisplayName="Delete Rows" sap:VirtualizedContainerService.HintSize="488,344.6666666666667" sap2010:WorkflowViewState.IdRef="DeleteRowsConnections_1" ItemSelectionMode="Browse" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+                    <uga:DeleteRowsConnections.DeleteMode>
+                      <InArgument x:TypeArguments="ugase:RowsDeleteMode">
+                        <CSharpValue x:TypeArguments="ugase:RowsDeleteMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">UiPath.GSuite.Activities.Sheets.Enums.RowsDeleteMode.Clear</CSharpValue>
+                      </InArgument>
+                    </uga:DeleteRowsConnections.DeleteMode>
+                    <uga:DeleteRowsConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID4" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:DeleteRowsConnections.FileIdBackup>
+                    <uga:DeleteRowsConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID4}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/1AUL0BZwfagRjCr3Ok4nAjFU1IUNVqNRqrZOWcq8GRcU/edit?usp=drivesdk" FriendlyName="AFAB_MANAGEMENT_HUB_2026" FullPathHint="My Drive/AFAB_MANAGEMENT_HUB_2026" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:DeleteRowsConnections.Item>
+                    <uga:DeleteRowsConnections.Range>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">current_response_sheet_name</CSharpValue>
+                      </InArgument>
+                    </uga:DeleteRowsConnections.Range>
+                    <uga:DeleteRowsConnections.Rows>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">"1-" + (dt_current_response_sheet.Rows.Count + 1).ToString()</CSharpValue>
+                      </InArgument>
+                    </uga:DeleteRowsConnections.Rows>
+                  </uga:DeleteRowsConnections>
+                  <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_13">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">jsonText</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">Newtonsoft.Json.JsonConvert.SerializeObject(dt_current_response_sheet)</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_14">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">prompt</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64" xml:space="preserve">@"You are an AI system that analyzes student complaints for teachers.
 
 Your task is to process a list of complaints and return structured JSON output.
 
@@ -336,220 +614,233 @@ RULES:
 "
 + 
 jsonText</CSharpValue>
-        </InArgument>
-      </Assign.Value>
-    </Assign>
-    <isactr:ConnectorActivity Configuration="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" ConnectionId="4bfdeffc-9bb5-4609-a7e9-0265d3e089e5" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="488,428" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
-      <isactr:ConnectorActivity.FieldObjects>
-        <isactr:FieldObject Name="prompt" Type="FieldArgument">
-          <isactr:FieldObject.Value>
-            <InArgument x:TypeArguments="x:String">
-              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">prompt.ToString()</CSharpValue>
-            </InArgument>
-          </isactr:FieldObject.Value>
-        </isactr:FieldObject>
-        <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
-          <isactr:FieldObject.Value>
-            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-          </isactr:FieldObject.Value>
-        </isactr:FieldObject>
-        <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
-        <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
-        <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
-        <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
-        <isactr:FieldObject Name="topK" Type="FieldArgument" />
-        <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
-          <isactr:FieldObject.Value>
-            <InArgument x:TypeArguments="x:String">None</InArgument>
-          </isactr:FieldObject.Value>
-        </isactr:FieldObject>
-        <isactr:FieldObject Name="_file" Type="FieldArgument" />
-        <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
-        <isactr:FieldObject Name="topP" Type="FieldArgument" />
-        <isactr:FieldObject Name="indexID" Type="FieldArgument" />
-        <isactr:FieldObject Name="max_tokens" Type="FieldArgument" />
-        <isactr:FieldObject Name="temperature" Type="FieldArgument" />
-        <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument" />
-        <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
-        <isactr:FieldObject Name="presence_penalty" Type="FieldArgument" />
-        <isactr:FieldObject Name="n" Type="FieldArgument" />
-        <isactr:FieldObject Name="top_p" Type="FieldArgument" />
-        <isactr:FieldObject Name="_stop" Type="FieldArgument" />
-        <isactr:FieldObject Name="modelName" Type="FieldArgument" />
-        <isactr:FieldObject Name="instruction" Type="FieldArgument">
-          <isactr:FieldObject.Value>
-            <InArgument x:TypeArguments="x:String">
-              <Literal x:TypeArguments="x:String" Value="" />
-            </InArgument>
-          </isactr:FieldObject.Value>
-        </isactr:FieldObject>
-        <isactr:FieldObject Name="out_text" Type="FieldArgument">
-          <isactr:FieldObject.Value>
-            <OutArgument x:TypeArguments="x:String">
-              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">aiResponse</CSharpReference>
-            </OutArgument>
-          </isactr:FieldObject.Value>
-        </isactr:FieldObject>
-        <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
-          <isactr:FieldObject.Value>
-            <OutArgument x:TypeArguments="x:String" />
-          </isactr:FieldObject.Value>
-        </isactr:FieldObject>
-        <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
-          <isactr:FieldObject.Value>
-            <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" />
-          </isactr:FieldObject.Value>
-        </isactr:FieldObject>
-        <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
-          <isactr:FieldObject.Value>
-            <OutArgument x:TypeArguments="x:String" />
-          </isactr:FieldObject.Value>
-        </isactr:FieldObject>
-      </isactr:ConnectorActivity.FieldObjects>
-    </isactr:ConnectorActivity>
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="488,176" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1">
-      <ui:DeserializeJson.JsonObject>
-        <OutArgument x:TypeArguments="njl:JObject">
-          <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">jsonOutput</CSharpReference>
-        </OutArgument>
-      </ui:DeserializeJson.JsonObject>
-      <ui:DeserializeJson.JsonString>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">aiResponse</CSharpValue>
-        </InArgument>
-      </ui:DeserializeJson.JsonString>
-    </ui:DeserializeJson>
-    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each teacherItem" sap:VirtualizedContainerService.HintSize="488,1712" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
-      <ui:ForEach.Body>
-        <ActivityAction x:TypeArguments="njl:JToken">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="njl:JToken" Name="teacherItem" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1589.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="currentTeacher" />
-              <Variable x:TypeArguments="x:String" Name="targetEmail" />
-            </Sequence.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <If sap:VirtualizedContainerService.HintSize="452,1529.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
-              <If.Condition>
-                <InArgument x:TypeArguments="x:Boolean">
-                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">teacherItem["teacher_name"] != null &amp;&amp; !string.IsNullOrWhiteSpace(teacherItem["teacher_name"].ToString())</CSharpValue>
-                </InArgument>
-              </If.Condition>
-              <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,1224" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="emailBody" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_5">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">
-                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">currentTeacher</CSharpReference>
-                      </OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">teacherItem["teacher_name"].ToString().Trim()</CSharpValue>
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_6">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">
-                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">targetEmail</CSharpReference>
+                  <isactr:ConnectorActivity Configuration="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" ConnectionId="4bfdeffc-9bb5-4609-a7e9-0265d3e089e5" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="488,428" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+                    <isactr:ConnectorActivity.FieldObjects>
+                      <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                        <isactr:FieldObject.Value>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">prompt.ToString()</CSharpValue>
+                          </InArgument>
+                        </isactr:FieldObject.Value>
+                      </isactr:FieldObject>
+                      <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+                        <isactr:FieldObject.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </isactr:FieldObject.Value>
+                      </isactr:FieldObject>
+                      <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+                      <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+                      <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+                      <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+                      <isactr:FieldObject Name="topK" Type="FieldArgument" />
+                      <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+                        <isactr:FieldObject.Value>
+                          <InArgument x:TypeArguments="x:String">None</InArgument>
+                        </isactr:FieldObject.Value>
+                      </isactr:FieldObject>
+                      <isactr:FieldObject Name="_file" Type="FieldArgument" />
+                      <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
+                      <isactr:FieldObject Name="topP" Type="FieldArgument" />
+                      <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+                      <isactr:FieldObject Name="max_tokens" Type="FieldArgument" />
+                      <isactr:FieldObject Name="temperature" Type="FieldArgument" />
+                      <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument" />
+                      <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
+                      <isactr:FieldObject Name="presence_penalty" Type="FieldArgument" />
+                      <isactr:FieldObject Name="n" Type="FieldArgument" />
+                      <isactr:FieldObject Name="top_p" Type="FieldArgument" />
+                      <isactr:FieldObject Name="_stop" Type="FieldArgument" />
+                      <isactr:FieldObject Name="modelName" Type="FieldArgument" />
+                      <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                        <isactr:FieldObject.Value>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </isactr:FieldObject.Value>
+                      </isactr:FieldObject>
+                      <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                        <isactr:FieldObject.Value>
+                          <OutArgument x:TypeArguments="x:String">
+                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">aiResponse</CSharpReference>
+                          </OutArgument>
+                        </isactr:FieldObject.Value>
+                      </isactr:FieldObject>
+                      <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+                        <isactr:FieldObject.Value>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </isactr:FieldObject.Value>
+                      </isactr:FieldObject>
+                      <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+                        <isactr:FieldObject.Value>
+                          <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" />
+                        </isactr:FieldObject.Value>
+                      </isactr:FieldObject>
+                      <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+                        <isactr:FieldObject.Value>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </isactr:FieldObject.Value>
+                      </isactr:FieldObject>
+                    </isactr:ConnectorActivity.FieldObjects>
+                  </isactr:ConnectorActivity>
+                  <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="488,176" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2">
+                    <ui:DeserializeJson.JsonObject>
+                      <OutArgument x:TypeArguments="njl:JObject">
+                        <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">jsonOutput</CSharpReference>
                       </OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
+                    </ui:DeserializeJson.JsonObject>
+                    <ui:DeserializeJson.JsonString>
                       <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37" xml:space="preserve">teacherRegistryData.AsEnumerable()
-    .Where(r =&gt; r.Field&lt;string&gt;("Teacher Name").Trim().Equals(currentTeacher, StringComparison.OrdinalIgnoreCase))
-    .Select(r =&gt; r.Field&lt;string&gt;("Email"))
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">aiResponse</CSharpValue>
+                      </InArgument>
+                    </ui:DeserializeJson.JsonString>
+                  </ui:DeserializeJson>
+                  <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each teacherItem" sap:VirtualizedContainerService.HintSize="488,1836" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+                    <ui:ForEach.Body>
+                      <ActivityAction x:TypeArguments="njl:JToken">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="njl:JToken" Name="teacherItem" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1713.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="currentTeacher" />
+                            <Variable x:TypeArguments="x:String" Name="targetEmail" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If sap:VirtualizedContainerService.HintSize="452,1653.3333333333333" sap2010:WorkflowViewState.IdRef="If_3">
+                            <If.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">teacherItem["teacher_name"] != null &amp;&amp; !string.IsNullOrWhiteSpace(teacherItem["teacher_name"].ToString())</CSharpValue>
+                              </InArgument>
+                            </If.Condition>
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,1348" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="emailBody" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">currentTeacher</CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">teacherItem["teacher_name"].ToString().Trim()</CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">targetEmail</CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76" xml:space="preserve">dt_current_registry_sheet.AsEnumerable()
+    .Where(r =&gt; r["Teacher_Name"].ToString().Trim().Equals(currentTeacher, StringComparison.OrdinalIgnoreCase))
+    .Select(r =&gt; r["Official_Email"].ToString())
     .FirstOrDefault()</CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="WriteLine_8">
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">string.Concat("Sending Email to ", targetEmail)</CSharpValue>
+                                  </InArgument>
+                                </WriteLine>
+                                <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">emailBody</CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">string.Format("&lt;div style='font-family: Arial, sans-serif; line-height: 1.6; color: #333;'&gt;&lt;p&gt;Dear &lt;strong&gt;{0}&lt;/strong&gt;,&lt;/p&gt;&lt;p&gt;You have received a total of &lt;strong&gt;{1}&lt;/strong&gt; complaints this period.&lt;/p&gt;&lt;div style='background-color: #f9f9f9; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0;'&gt;&lt;h4 style='margin-top: 0; color: #007bff;'&gt;AI Summary of Feedback:&lt;/h4&gt;&lt;p style='margin-bottom: 0;'&gt;{2}&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Automated Feedback System&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;", teacherItem["teacher_name"].ToString(), teacherItem["total_complaints"].ToString(), teacherItem["summary"].ToString())</CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="7a89c920-31d3-4004-9fc4-8b3a9d370a0b" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,519.3333333333334" sap2010:WorkflowViewState.IdRef="SendEmailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="False" UseConnectionService="True">
+                                  <uga:SendEmailConnections.Attachments>
+                                    <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+                                  </uga:SendEmailConnections.Attachments>
+                                  <uga:SendEmailConnections.AttachmentsBackup>
+                                    <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                                      <usau:BackupSlot.BackupValues>
+                                        <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                                      </usau:BackupSlot.BackupValues>
+                                    </usau:BackupSlot>
+                                  </uga:SendEmailConnections.AttachmentsBackup>
+                                  <uga:SendEmailConnections.Body>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">emailBody</CSharpValue>
+                                    </InArgument>
+                                  </uga:SendEmailConnections.Body>
+                                  <uga:SendEmailConnections.InputTypeBackup>
+                                    <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                                      <usau:BackupSlot.BackupValues>
+                                        <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                                      </usau:BackupSlot.BackupValues>
+                                    </usau:BackupSlot>
+                                  </uga:SendEmailConnections.InputTypeBackup>
+                                  <uga:SendEmailConnections.Subject>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">"Feedback Summary for " + teacherItem["teacher_name"].ToString()</CSharpValue>
+                                    </InArgument>
+                                  </uga:SendEmailConnections.Subject>
+                                  <uga:SendEmailConnections.To>
+                                    <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
+                                      <CSharpValue x:TypeArguments="scg:IEnumerable(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">new string[] { targetEmail }</CSharpValue>
+                                    </InArgument>
+                                  </uga:SendEmailConnections.To>
+                                </uga:SendEmailConnections>
+                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="Email Sent" />
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Teacher name is empty" />
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEach.Body>
+                    <ui:ForEach.Values>
+                      <InArgument x:TypeArguments="sc:IEnumerable">
+                        <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">jsonOutput["teachers"]</CSharpValue>
                       </InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="WriteLine_2">
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">targetEmail</CSharpValue>
-                    </InArgument>
-                  </WriteLine>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_7">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">
-                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">emailBody</CSharpReference>
-                      </OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">string.Format("&lt;div style='font-family: Arial, sans-serif; line-height: 1.6; color: #333;'&gt;&lt;p&gt;Dear &lt;strong&gt;{0}&lt;/strong&gt;,&lt;/p&gt;&lt;p&gt;You have received a total of &lt;strong&gt;{1}&lt;/strong&gt; complaints this period.&lt;/p&gt;&lt;div style='background-color: #f9f9f9; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0;'&gt;&lt;h4 style='margin-top: 0; color: #007bff;'&gt;AI Summary of Feedback:&lt;/h4&gt;&lt;p style='margin-bottom: 0;'&gt;{2}&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Automated Feedback System&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;", teacherItem["teacher_name"].ToString(), teacherItem["total_complaints"].ToString(), teacherItem["summary"].ToString())</CSharpValue>
-                      </InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="7a89c920-31d3-4004-9fc4-8b3a9d370a0b" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,510" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" UseConnectionService="True">
-                    <uga:SendEmailConnections.Attachments>
-                      <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
-                    </uga:SendEmailConnections.Attachments>
-                    <uga:SendEmailConnections.AttachmentsBackup>
-                      <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
-                        <usau:BackupSlot.BackupValues>
-                          <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
-                        </usau:BackupSlot.BackupValues>
-                      </usau:BackupSlot>
-                    </uga:SendEmailConnections.AttachmentsBackup>
-                    <uga:SendEmailConnections.Body>
-                      <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">emailBody</CSharpValue>
-                      </InArgument>
-                    </uga:SendEmailConnections.Body>
-                    <uga:SendEmailConnections.InputTypeBackup>
-                      <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
-                        <usau:BackupSlot.BackupValues>
-                          <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
-                        </usau:BackupSlot.BackupValues>
-                      </usau:BackupSlot>
-                    </uga:SendEmailConnections.InputTypeBackup>
-                    <uga:SendEmailConnections.Subject>
-                      <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">"Feedback Summary for " + teacherItem["teacher_name"].ToString()</CSharpValue>
-                      </InArgument>
-                    </uga:SendEmailConnections.Subject>
-                    <uga:SendEmailConnections.To>
-                      <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
-                        <CSharpValue x:TypeArguments="scg:IEnumerable(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">new string[] { targetEmail }</CSharpValue>
-                      </InArgument>
-                    </uga:SendEmailConnections.To>
-                  </uga:SendEmailConnections>
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Teacher Name is NULL" />
+                    </ui:ForEach.Values>
+                  </ui:ForEach>
                 </Sequence>
               </If.Else>
             </If>
           </Sequence>
         </ActivityAction>
-      </ui:ForEach.Body>
-      <ui:ForEach.Values>
-        <InArgument x:TypeArguments="sc:IEnumerable">
-          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">jsonOutput["teachers"]</CSharpValue>
+      </ui:ForEachRow.Body>
+      <ui:ForEachRow.DataTable>
+        <InArgument x:TypeArguments="sd1:DataTable">
+          <CSharpValue x:TypeArguments="sd1:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">dt_meta</CSharpValue>
         </InArgument>
-      </ui:ForEach.Values>
-    </ui:ForEach>
+      </ui:ForEachRow.DataTable>
+    </ui:ForEachRow>
   </Sequence>
 </Activity>
