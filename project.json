@@ -6,9 +6,11 @@
   "dependencies": {
     "UiPath.Form.Activities": "[25.4.3]",
     "UiPath.GSuite.Activities": "[3.8.10]",
-    "UiPath.IntegrationService.Activities": "[1.24.0]",
+    "UiPath.IntegrationService.Activities": "[1.25.0]",
     "UiPath.Mail.Activities": "[2.8.10]",
     "UiPath.System.Activities": "[26.2.4]",
+    "UiPath.UIAutomation.Activities": "[26.4.0-preview]",
+    "UiPath.UIAutomation.Activities.Design.RecoveryPanel": "[24.12.5-preview]",
     "UiPath.WebAPI.Activities": "[2.4.0]"
   },
   "webServices": [],
